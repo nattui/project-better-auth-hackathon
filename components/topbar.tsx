@@ -30,7 +30,7 @@ export function Topbar() {
               size={36}
               variant="accent"
             >
-              Ask question
+              Create
             </Button>
             {session ? (
               <>

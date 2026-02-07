@@ -17,7 +17,7 @@ const links: {
   {
     href: "/create",
     icon: LucidePlus,
-    label: "Ask question",
+    label: "Create",
   },
 ]
 

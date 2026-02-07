@@ -12,14 +12,17 @@
     "@nattui/tailwind-colors": "0.0.8",
     "@nattui/tailwind-exact": "0.0.5",
     "@use-gesture/react": "10.3.1",
+    "better-auth": "^1.4.18",
     "motion": "12.31.0",
     "next": "16.1.6",
+    "pg": "^8.18.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.18",
     "@types/node": "25.2.0",
+    "@types/pg": "^8.16.0",
     "@types/react": "19.2.10",
     "@types/react-dom": "19.2.3",
     "babel-plugin-react-compiler": "1.0.0",

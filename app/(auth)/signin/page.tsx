@@ -36,7 +36,7 @@ export default function SigninPage() {
 
   return (
     <div className="flex w-full flex-col items-center">
-      <form className="flex w-full max-w-360 flex-col" onSubmit={handleSubmit}>
+      <form className="flex w-full max-w-384 flex-col" onSubmit={handleSubmit}>
         <h1 className="text-24 font-semibold">Sign in</h1>
         <Spacer className="h-8" />
         <p className="text-gray-11 text-14">

@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import type { PropsWithChildren } from "react"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Providers } from "@/app/providers"
-import { Sidebar } from "@/components/sidebar"
 import { Topbar } from "@/components/topbar"
 
 export default function RootLayout(props: PropsWithChildren) {

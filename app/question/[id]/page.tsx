@@ -611,6 +611,8 @@ export default function QuestionDetailPage() {
           {question.answers.map((answer) => (
             <AnswerCard
               answer={answer}
+              bountyAmount={question.bounty_amount}
+              currentUserId={session?.user.id}
               isAccepting={acceptingId === answer.id}
               isQuestionAuthor={isAuthor}
               key={answer.id}

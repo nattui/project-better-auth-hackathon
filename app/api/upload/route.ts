@@ -1,5 +1,3 @@
-import { writeFile, mkdir } from "node:fs/promises"
-import { join } from "node:path"
 import { auth } from "@/lib/auth"
 
 export async function POST(request: Request) {
@@ -36,17 +34,9 @@ export async function POST(request: Request) {
   const bytes = await file.arrayBuffer()
   const buffer = Buffer.from(bytes)
 
-  // Generate unique filename
-  const ext = file.name.split(".").pop() || "jpg"
-  const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`
-
-  const uploadsDir = join(process.cwd(), "public", "uploads")
-  await mkdir(uploadsDir, { recursive: true })
-
-  const filepath = join(uploadsDir, filename)
-  await writeFile(filepath, buffer)
-
-  const url = `/uploads/${filename}`
+  // Convert to base64 data URL so images persist without filesystem storage
+  const base64 = buffer.toString("base64")
+  const url = `data:${file.type};base64,${base64}`
 
   return Response.json({ url }, { status: 201 })
 }

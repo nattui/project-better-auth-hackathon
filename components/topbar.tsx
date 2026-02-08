@@ -48,7 +48,7 @@ export function Topbar() {
                   size={36}
                   variant="ghost"
                 >
-                  Profile
+                  {session.user.name}
                 </Button>
                 <Button
                   iconStart={<LucideLogOut size={16} />}
